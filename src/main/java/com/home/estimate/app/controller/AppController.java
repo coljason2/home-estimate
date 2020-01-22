@@ -44,8 +44,9 @@ public class AppController {
 
         BigDecimal result = estimateService.estimate(entity);
 
-
         model.addAttribute("result", result);
+        model.addAttribute("entity", entity);
+
         return "result";
     }
 }

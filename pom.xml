@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.home.estimate</groupId>
-    <artifactId>app</artifactId>
-    <version>1.0.0.RC</version>
+    <artifactId>home estimate</artifactId>
+    <version>1.0.0</version>
     <name>app</name>
     <description>Home Estimate</description>
 
