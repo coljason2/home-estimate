@@ -6,18 +6,22 @@
 </head>
 Ee
 <body>
-<div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
-    <div class="wrapper wrapper--w680">
-        <h1>試算結果</h1>
-        <h2><span th:text="'土地成本：' + ${entity.landPrice} + ' 元/平方公尺'"></span></h2>
-        <h2><span th:text="'容積率：' + ${entity.volumeRate} + ' %'"></span></h2>
-        <h2><span th:text="'售坪比：' + ${entity.sellRate} + ''"></span></h2>
-        <h2><span th:text="'建造成本：' + ${entity.constructionCost} + ' 元/坪'"></span></h2>
-        <h2><span th:text="'管銷費用：' + ${entity.manageCost} + ''"></span></h2>
-        <h2><span th:text="'利潤：' + ${entity.profit} + ''"></span></h2>
-        <h1>公式： [土地成本 / (容積率*建坪比) + 建築成本] * 管銷費 * 利潤</h1>
-        <h2><span th:text="'平均每坪造價成本約' + ${result} + ' 元(新台幣)'"></span></h2>
+<!--<div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">-->
+<!--    <div class="wrapper wrapper&#45;&#45;w800">-->
+<div class="container">
+    <h1>試算結果</h1>
+    <div class="alert alert-primary" role="alert">公式： [土地成本 / (容積率 * 建坪比) + 建築成本] * 管銷費 * 利潤</div>
+    <div class="alert alert-success" role="alert">
+        <h3><span th:text="'土地成本：' + ${entity.landPrice} + ' 元/坪'"></span></h3>
+        <h3><span th:text="'容積率：' + ${entity.volumeRate} + ' %'"></span></h3>
+        <h3><span th:text="'售坪比：' + ${entity.sellRate} + ''"></span></h3>
+        <h3><span th:text="'建造成本：' + ${entity.constructionCost} + ' 元/坪'"></span></h3>
+        <h3><span th:text="'管銷費用：' + ${entity.manageCost} + ''"></span></h3>
+        <h3><span th:text="'利潤：' + ${entity.profit} + ''"></span></h3>
+        <hr>
+        <h3><span th:text="'平均每坪造價成本約' + ${result} + ' 元(新台幣)'"></span></h3>
     </div>
 </div>
+<!--</div>-->
 </body>
 </html>

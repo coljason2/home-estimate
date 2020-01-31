@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+import static java.math.BigDecimal.ROUND_UP;
+
 @Service
 public class EstimateService {
 
@@ -14,7 +16,7 @@ public class EstimateService {
          *公式： [土地成本 / (容積率*建坪比) + 建築成本] * 管銷費 * 利潤
          **/
         return model.getLandPrice()
-                .divide(model.getVolumeRate().multiply(model.getSellRate()))
+                .divide(model.getVolumeRate().multiply(model.getSellRate()),ROUND_UP)
                 .add(model.getConstructionCost())
                 .multiply(model.getManageCost())
                 .multiply(model.getProfit());
