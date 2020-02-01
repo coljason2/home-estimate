@@ -26,12 +26,12 @@ public class AppController {
     }
 
     @PostMapping("/estimate")
-    public String estimate(@RequestParam BigDecimal landPrice,
-                           @RequestParam BigDecimal volumeRate,
-                           @RequestParam BigDecimal sellRate,
-                           @RequestParam BigDecimal constructionCost,
-                           @RequestParam BigDecimal manageCost,
-                           @RequestParam BigDecimal profit,
+    public String estimate(@RequestParam(defaultValue ="80000") BigDecimal landPrice,
+                           @RequestParam(defaultValue ="3.6") BigDecimal volumeRate,
+                           @RequestParam(defaultValue ="1.55") BigDecimal sellRate,
+                           @RequestParam(defaultValue ="150000") BigDecimal constructionCost,
+                           @RequestParam(defaultValue ="1.15") BigDecimal manageCost,
+                           @RequestParam(defaultValue ="1.3") BigDecimal profit,
                            Model model) {
 
         EstimateModel entity = new EstimateModel();
